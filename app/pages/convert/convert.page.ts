@@ -29,9 +29,10 @@ convert(){
    
     let num=0
     for(let i=0;i<=e;i++){
-      console.log(this.termentedResult[i])
+   //   console.log(this.termentedResult[i])
+   this.termentedResult.shift()
       num+=this.termentedResult[g+1]
-      this.termentedResult.shift()
+      
 
     
     }
