@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title slot="start" size="large">convert</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<div class="mainDiv">
+  <div class="innerDiv">
+    <ion-list>
+    <h1>Enter A measurement in Charactrer</h1>
+    
+    <ion-item >
+      <ion-input [(ngModel)]="sequence" align="left" type="text"
+        placeholder="Type the sequence here......" ></ion-input>
+    </ion-item>
+
+    <ion-button  (click)="measure()">
+     measure
+    </ion-button>
+
+    <h1 *ngFor="let i of result">{{i}}</h1>
+    </ion-list>
+  </div>
+</div>
+</ion-content>

@@ -1,0 +1,22 @@
+.mainDiv{
+    position: relative;
+    height: 400px;
+    text-align: center;
+    .innerDiv{
+        border:1px solid black;
+        height: 80%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 70%;
+        position: absolute;
+
+        ion-list{
+            ion-button{font-family: system-ui;
+            font-size: medium;
+            margin: 40px !important;}
+    }
+}
+}
