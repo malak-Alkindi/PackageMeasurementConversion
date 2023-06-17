@@ -14,8 +14,7 @@ export class CalculationServiceService {
 
 this.Sresult=sequance.split("");
 this.Sresult.forEach((e:any,i) => {
-  var no =(this.charcter.indexOf(e)+1)
-  console.log("the index is " +  no)
+
 
   if(e!='z'){
     this.result.push(this.numbers[this.charcter.indexOf(e)])
