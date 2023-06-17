@@ -8,37 +8,48 @@ import {CalculationServiceService} from '../../services/calculation-service.serv
 export class ConvertPage implements OnInit {
 
   public sequence:string="";
-  result:any[]=[];
-  termentedResult:any[]=[];
+   result:any=[];
+  termentedResult:any=[];
   convertedArray:any[]=[];
   constructor(public calServ:CalculationServiceService) { }
 
   ngOnInit() {
-  }
+  } 
 measure(){
 
-  this.result = this.calServ.convert(this.sequence )
-
+return this.calServ.convert(this.sequence)
+  //this.termentedResult=this.result
+  this.sequence=""
 }
 
 
-convert(){
-  this.termentedResult=this.result
-  console.log(this.termentedResult)
-  this.termentedResult.forEach((e:any,g) => {
+convertt(){
+  this.calServ.terminate(this.result)
+ 
+  // this.termentedResult.forEach((e,g) => {
+  //  // this.termentedResult=this.termentedResult.splice(0,e);
+
+  //   let num=0
+  //  //num+=this.termentedResult[g+1]
+  //   for(var i=0;i<=e;i++){
    
-    let num=0
-    for(let i=0;i<=e;i++){
-   //   console.log(this.termentedResult[i])
-   this.termentedResult.shift()
-      num+=this.termentedResult[g+1]
-      
-
-    
-    }
-    console.log(this.termentedResult)
+     
+  //   }
  
-  });
+  //   //console.log(this.convertedArray)
+  //   console.log("----------------")
+  //  console.log(this.termentedResult.splice(0,e))
+  //  //this.termentedResult=this.convertedArray
+  //   //this.getTheConvertedArray(this.termentedResult)
+  // });
  
 }
+
+// getTheConvertedArray(termentedResult:any[]){
+// let num =0
+//   for(let i=1;i<=termentedResult.length;i++){
+//   num+=termentedResult[i]
+// }
+// console.log(num)
+// }
 }
